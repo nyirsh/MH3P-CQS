@@ -1,0 +1,99 @@
+#dock {
+       margin:0px; padding:0px;
+       list-style:none;
+       position:fixed;
+       top:50px;
+       z-index:100;
+       left:0px;
+}
+
+#dock > li {
+       width:25px;
+       height: 65px;
+       margin: 0;
+       background-repeat:no-repeat;
+       background-position:left center;
+}
+
+#dock #links {
+       background-image:url(../images/menu-base.png);
+}
+
+#dock #admin {
+       background-image:url(../images/menu-admin.png);
+}
+        
+#dock ul li {
+       padding:5px;
+       border: 0;
+}
+
+#dock ul li.mheader {
+       background: #272727 url(../images/thead.png) repeat-x;
+       border-bottom: 1px solid black;
+       text-align: right;
+}
+
+#dock ul li.melement {
+       padding: 0 5px 0 0;
+}
+
+#dock ul li.melement:hover {
+       background:#444444;
+       padding: 0 5px 0 0;
+}
+
+.ma {
+       padding-top: 5px !important;
+       padding-bottom: 5px !important;
+       margin: 0px !important;
+       display: block !important;
+       width: 100% !important;
+       height: 100% !important;
+       text-decoration: none !important;
+}
+
+.ma:visited {
+       padding-top: 5px !important;
+       padding-bottom: 5px !important;
+       margin: 0px !important;
+       display: block !important;
+       width: 100% !important;
+       height: 100% !important;
+       text-decoration: none !important;
+}
+
+.ma:active {
+       padding-top: 5px !important;
+       padding-bottom: 5px !important;
+       margin: 0px !important;
+       display: block !important;
+       width: 100% !important;
+       height: 100% !important;
+       text-decoration: none !important;
+}
+
+.ma:hover {
+       padding-top: 5px !important;
+       padding-bottom: 5px !important;
+       margin: 0px !important;
+       display: block !important;
+       width: 100% !important;
+       height: 100% !important;
+       text-decoration: none !important;
+}
+      
+#dock > li ul {
+       font-size: 0.85em;
+       top: -20px;
+       left: -181px;
+       z-index:-1;
+       width: 120px;
+       position: relative;
+       background-color: #0d0d0d;
+       border:solid 1px black;
+       padding:0px;
+       margin:0px;
+       list-style:none;
+       text-align: right;
+}
