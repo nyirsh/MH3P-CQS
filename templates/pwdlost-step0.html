@@ -1,0 +1,119 @@
+<div class="table-styler shadow">
+<table class="table-content">
+<thead>
+<tr>
+  <td>
+    <h1>QS3 | What have you lost?</h1>
+  </td>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+ <td class="table-subhead">
+   <div id="tabmenucontainer">
+     <ul class="tabmenumenu">
+		<li id="tabP1" class="active">Password</li>
+		<li id="tabP2">Username</li>
+        <li id="tabP3">Insert Code</li>
+     </ul>
+   </div>
+ </td>
+</tr>
+
+<tr>
+ <td class="table-row">
+    <div class="tabmenucontent tabP1">
+       <h2>Retrieve » Password</h2>
+       <form action="pwdlost.php" id="pwdForm" method="post">
+          Username:
+          <input type="text" name="daUser" class="validate[required]" id="req"/>
+          <input type="hidden" name="step" value="1-pwd" />
+          <input class="submit" type="submit" value="Send"/>
+       </form>
+<hr/>
+<div class="spoiler">
+<span>&#9658;</span>
+<a onclick="performSpoiler(this); return false">What? An Username?</a>
+<div class="inner toround" style="display:none;">
+Please insert the Username you used to register to QS3 site.<br/>
+An email will be sent to the registration address with a code that you can use to change your password.<br/>
+You can insert that code in the "Insert Code" tab.<br/>
+If you don't receive the email ensure that is not in the "Spam" folder.
+</div>
+</div>
+
+    </div>
+    <div class="tabmenucontent tabP2">
+       <h2>Retrieve » Username</h2>
+       <form action="pwdlost.php" id="usrForm" method="post">
+          Email:
+          <input type="text" name="daEmail" class="validate[required,custom[email]]" id="req"/>
+          <input type="hidden" name="step" value="1-user" />
+          <input class="submit" type="submit" value="Send"/>
+       </form>
+<hr/>
+<div class="spoiler">
+<span>&#9658;</span>
+<a onclick="performSpoiler(this); return false">What? An Email?</a>
+<div class="inner toround" style="display:none;">
+Please insert the email address you used to register to QS3 site.<br/>
+An email will be sent to that address with the associated username.<br/>
+If you don't receive the email ensure that is not in the "Spam" folder.
+</div>
+</div>
+
+    </div>
+    <div class="tabmenucontent tabP3">
+		<h2>Insert » Authorization Code</h2>
+		<form action="pwdlost.php" id="codeForm" method="post">
+			<table>
+				<tr>
+					<td>
+						Username:
+					</td>
+					<td>
+						<input type="text" name="daUserCode" class="validate[required]" id="req1"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Code:
+					</td>
+					<td>
+						<input type="text" name="daCode" class="validate[required]" id="req"/>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td style="text-align: right">
+						<input type="hidden" name="step" value="1-code" />
+						<input class="submit" type="submit" value="Send" />
+					</td>
+				</tr>
+			</table>
+		</form>
+<hr/>
+<div class="spoiler">
+<span>&#9658;</span>
+<a onclick="performSpoiler(this); return false">What? An Username?</a>
+<div class="inner toround" style="display:none;">
+Well, it's your username.
+</div>
+</div>
+<div class="spoiler">
+<span>&#9658;</span>
+<a onclick="performSpoiler(this); return false">What? A Code?</a>
+<div class="inner toround" style="display:none;">
+Please insert the code we sent you via email.<br/>
+If you don't receive the email ensure that is not in the "Spam" folder.
+</div>
+</div>
+    </div>
+ </td>
+</tr>
+</tbody>
+
+</table>
+</div>
+<br/>

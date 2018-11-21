@@ -1,0 +1,69 @@
+<div class="table-styler shadow">
+<table class="table-content">
+<thead>
+<tr>
+  <td>
+    <h1>QS3 | What have you lost?</h1>
+  </td>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+ <td class="table-subhead">
+ <div id="tabmenucontainer">
+   <ul class="tabmenumenu"><li class="active">Password Change Module</li></ul>
+ </div>
+ </td>
+</tr>
+
+<tr>
+ <td class="table-row">
+	<h2>Password » Change</h2>
+	<form action="pwdlost.php" id="codeForm" method="post">
+		<table>
+			<tr>
+				<td>
+					New Password:
+				</td>
+				<td>
+					<input type="password" name="daPwd" class="validate[required]" id="daPwd"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Again:
+				</td>
+				<td>
+					<input type="password" name="daPwdAgain" class="validate[required,equals[daPwd]]" id="daPwdAgain"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="hidden" name="daUserCode" value="<!-- DAUSERCODE -->" />
+					<input type="hidden" name="daCode" value="<!-- DACODE -->" />
+				</td>
+				<td style="text-align: right">
+					<input type="hidden" name="step" value="2-code" />
+					<input class="submit" type="submit" value="Send" />
+				</td>
+			</tr>
+		</table>
+	</form>
+<hr/>
+
+	<div class="spoiler">
+	<span>&#9658;</span>
+	<a onclick="performSpoiler(this); return false">What's "Again"?</a>
+	<div class="inner toround" style="display:none;">
+	Just retype your new password for confirmation.
+	</div>
+	</div>
+
+ </td>
+</tr>
+</tbody>
+
+</table>
+</div>
+<br/>
