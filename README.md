@@ -3,7 +3,7 @@
 Not gonna lie, this code is very old, not commented and very messy and I don't think it will be of any use to anybody but... who knows?
 I'm uploading it on GitHub after such a long time for archive purposes
 
-# What it is?
+# What it this?
 Let me give a little introduction first: Monster Hunter is a game developed by Capcom and it's very popular in Japan.
 The game concept is simple and straightforward: you choose a weapon of your likeness, use it to defeat huge monster and gather materials from them which you use to craft new gears and the cycle continues.
 In order to take down a specific monster you have to complete quests and while the game came with a lot of them already is also had a "Download" functionality that allowed players to get DLC ones from the Capcom quest store.
