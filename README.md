@@ -1,27 +1,27 @@
 # QS3 >> Monster Hunter Portable 3rd Custom Quest Store
 
-Not gonna lie, this project is very old and I don't think it will be any useful for new MH games but... who knows?
-Maybe one day I'll come back to the scene and I realize their new quest store isn't changed that much and I can simply re-adapt this one.
-I'm uploading it on GitHub after such a long time just to make sure I don't lose it if I swap drives or something like that. Just don't judge it, I was 16 y/o when I wrote this.
+Not gonna lie, this code is very old, not commented and very messy and I don't think it will be of any use to anybody but... who knows?
+I'm uploading it on GitHub after such a long time for archive purposes
 
 # What it is?
 Let me give a little introduction first: Monster Hunter is a game developed by Capcom and it's very popular in Japan.
 The game concept is simple and straightforward: you choose a weapon of your likeness, use it to defeat huge monster and gather materials from them which you use to craft new gears and the cycle continues.
-In order to take down a specific monster you have to take part of quests. The game itself had a "Download" button that allowed you to download more quests from the Capcom website.
-I made a patch so that the download button was taking the users to my own personal store of custom crafted quests.
-The patch itself wasn't really necessary since a simple DNS trick could have done the job but since not everyone is a tech guy I decided to follow that way.
-Point is: I developed a tool to allow anyone to easily create their own custom quests and upload them on my store so that anyone could play them, even on original consoles / games and what you're looking at is the source code of my quest store.
-I crafted a whole site around it, if you're interested on how the actual store worked, just check out the "store" subfolder and ignore the rest.
+In order to take down a specific monster you have to complete quests and while the game came with a lot of them already is also had a "Download" functionality that allowed players to get DLC ones from the Capcom quest store.
+I therefore made a patch for the game that redirected the download button to my own personal store of users' custom crafted quests.
+The best part was that since all of the quests generated thru the [Custom Quest Editor](https://github.com/nyirsh/MH3P-CQE) I made were digitally signed as if Capcom made them, is was possible for players to download and install them thru the game menu even if they had an original PSP / unpatched game by using a quick and dirty DNS trick to connect to my store instead of the official one.
+What you're looking at right now is the source code of not only the store part itself (which can obviously be found under the `store` folder) but also of the whole site that people used to submit their own quests to the store, or at least what's left of it.
 
-# How did you manage to make it work properly?
-I used a MITM approach to sniff and intercept the packages the PSP was sending out to the original Capcom store.
-It didn't took much time to realize it was just calling this php page:
+Story time!
+> I sadly was young and naive when I developed this stuff and never really took backups seriously and well, thru the age of time the code was lost and this is what I was able to recover on a very old drive of mine I randomly found one day.
+> It is definitively not the latest version, the website part itself is probably not even working, the database structure got lost (even if it should be easy to recover it) but the actual store part of the project was definitively complete at this stage which, for archiving purposes, is more than enough for me
 
-http://crusader.capcom.co.jp/psp/MHP3rd/DL_SEL.PHP 
+# How did you manage to get it done?
+The PSP was clearly connecting over the internet in order to download the new quests and it was enough to crack open its secret using a MITM approach. It didn't take much time to realize that the game was just opening an integrated web browser pointing to this URL which, as of 2022, is still active: 
 
-If you try to connect to it without the right User Agent it will just prompt an error message. Good thing finding it was a piece of cake:
+`http://crusader.capcom.co.jp/psp/MHP3rd/DL_SEL.PHP`
 
-Capcom Portable Browser v1.4 for MonsterHunterPortable3rd
+The only form of security that page had was relying on checking the User Agent of the browser which is the easiest thing to find and spoof:
 
-Spoofing UA is really easy, and once I did that I could explore it just as if I was using a PSP.
-From there everything was really easy, I only needed to observe the HTML code and the behavior of their store so I could reverse engineer it and make my own.
+`Capcom Portable Browser v1.4 for MonsterHunterPortable3rd`
+
+After that it was just a matter of time and patience, browsing thru the pages and making sure that the HTML I was generating was respecting the same structure and voila!
